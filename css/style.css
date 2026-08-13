@@ -273,6 +273,23 @@ section{padding:80px 0;}
 .bg-laranja{background:linear-gradient(135deg, var(--laranja), #ffb877);}
 .bg-turquesa{background:linear-gradient(135deg, var(--turquesa), #85f2ea);}
 
+/* ===== Ícones estilo luxo (seção Soluções completas) ===== */
+.card-icon-luxo{
+  width:52px; height:52px;
+  border-radius:14px;
+  display:flex; align-items:center; justify-content:center;
+  margin-bottom:18px;
+  background:linear-gradient(155deg, rgba(255,255,255,0.07), rgba(255,255,255,0.015));
+  border:1px solid rgba(212,175,122,0.32);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+.card-icon-luxo svg{width:24px; height:24px;}
+
+.icon-ouro{color:#D9B872;}
+.icon-prata{color:#C9CDD9;}
+.icon-cobre{color:#D98E73;}
+
 .card h3{font-size:1.12rem; margin-bottom:10px; color:var(--texto); font-weight:700;}
 .card p{color:var(--texto-claro); font-size:.92rem;}
 
