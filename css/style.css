@@ -336,7 +336,7 @@ section{padding:80px 0;}
   display:flex;
   gap:28px;
   width:max-content;
-  animation:clientes-scroll 42s linear infinite;
+  animation:clientes-scroll 56s linear infinite;
 }
 
 .clientes-marquee:hover .clientes-track{animation-play-state:paused;}
