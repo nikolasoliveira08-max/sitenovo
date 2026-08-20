@@ -92,6 +92,64 @@ header{
   background:var(--laranja);
 }
 
+/* ===== Dropdown "Soluções" ===== */
+.nav-item-dropdown{position:relative;}
+
+.nav-dropdown-trigger{
+  display:flex; align-items:center; gap:5px;
+  font-weight:600; font-size:.92rem; color:var(--texto-claro);
+  background:none; border:none; cursor:pointer; padding:6px 0;
+  font-family:inherit;
+}
+
+.nav-dropdown-trigger:hover{color:var(--texto);}
+
+.nav-dropdown-trigger svg{width:13px; height:13px; transition:transform .2s;}
+
+.nav-item-dropdown:hover .nav-dropdown-trigger svg{transform:rotate(180deg);}
+
+.nav-dropdown-menu{
+  position:absolute;
+  top:calc(100% + 16px);
+  left:50%;
+  transform:translateX(-50%) translateY(6px);
+  width:280px;
+  background:var(--surface);
+  border:1px solid var(--linha);
+  border-radius:16px;
+  box-shadow:var(--sombra);
+  padding:10px;
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .18s, transform .18s, visibility .18s;
+}
+
+.nav-item-dropdown:hover .nav-dropdown-menu,
+.nav-item-dropdown:focus-within .nav-dropdown-menu{
+  opacity:1; visibility:visible; transform:translateX(-50%) translateY(0);
+}
+
+.nav-dropdown-menu a{
+  display:flex; gap:12px; align-items:flex-start;
+  padding:12px; border-radius:10px;
+  color:var(--texto);
+  transition:background .15s;
+}
+
+.nav-dropdown-menu a:hover{background:var(--surface-2);}
+
+.nav-dropdown-menu .ic{
+  min-width:34px; height:34px; border-radius:9px;
+  display:flex; align-items:center; justify-content:center;
+  background:rgba(255,255,255,0.05); border:1px solid var(--linha);
+  color:var(--turquesa); margin-top:1px;
+}
+
+.nav-dropdown-menu .ic svg{width:17px; height:17px;}
+
+.nav-dropdown-menu strong{display:block; font-size:.88rem; font-weight:700;}
+.nav-dropdown-menu span{display:block; font-size:.76rem; color:var(--texto-claro); margin-top:2px;}
+
 .btn{
   display:inline-block;
   padding:13px 28px;
@@ -338,6 +396,22 @@ section{padding:80px 0;}
   font-weight:800;
 }
 
+.valor-item .dot.dot-alerta{background:rgba(255,107,107,0.15); color:#FF6B6B;}
+.valor-item .dot svg{width:16px; height:16px;}
+
+/* ===== Landing pages focadas (Soluções) ===== */
+.publico-pill{
+  display:inline-flex; align-items:center; gap:8px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid var(--linha);
+  border-radius:50px;
+  padding:8px 18px;
+  font-size:.84rem;
+  font-weight:600;
+  color:var(--texto-claro);
+  margin-bottom:10px;
+}
+
 /* ===== Nossos clientes ===== */
 .clientes-section{padding-bottom:70px;}
 
@@ -577,6 +651,15 @@ footer ul li a:hover{color:var(--laranja);}
   }
   .nav-links.open{transform:translateY(0);}
   .menu-toggle{display:flex;}
+  .nav-item-dropdown{width:100%;}
+  .nav-dropdown-trigger{width:100%; justify-content:space-between;}
+  .nav-dropdown-menu{
+    position:static; transform:none; opacity:1; visibility:visible;
+    width:100%; box-shadow:none; border:none; background:transparent;
+    padding:6px 0 0 12px; display:none;
+  }
+  .nav-item-dropdown.mobile-open .nav-dropdown-menu{display:block;}
+  .nav-item-dropdown.mobile-open .nav-dropdown-trigger svg{transform:rotate(180deg);}
 }
 
 @media (max-width:600px){
