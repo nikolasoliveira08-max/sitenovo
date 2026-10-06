@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HLM7G4MR8B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-HLM7G4MR8B");
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contato | Hipper Soluções</title>
@@ -166,6 +174,7 @@
     const servico = document.getElementById('servico').value;
     const mensagem = document.getElementById('mensagem').value;
     const texto = encodeURIComponent(`Olá! Meu nome é ${nome}. Tenho interesse em: ${servico}. ${mensagem}`);
+    if (typeof gtag === 'function') gtag('event', 'whatsapp_click', {pagina: 'contato.html', origem: 'formulario'});
     window.open(`https://wa.me/5511976655914?text=${texto}`, '_blank');
   });
 </script>
