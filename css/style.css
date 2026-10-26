@@ -628,3 +628,44 @@ footer ul li a:hover{color:var(--laranja);}
   .hero h1{font-size:2rem;}
   .cta-banda{margin:0 12px; padding:40px 22px;}
 }
+
+/* ===== ZapCRM ===== */
+.btn-entrar{padding:10px 18px;}
+.zap-nota{color:var(--texto-claro); font-size:.85rem; margin-top:14px;}
+.zap-chat{display:flex; flex-direction:column; gap:12px;}
+.zap-msg{max-width:85%; padding:12px 14px; border-radius:14px; font-size:.95rem; line-height:1.45;}
+.zap-msg em{display:block; font-style:normal; font-size:.72rem; color:var(--texto-claro); margin-top:4px; text-align:right;}
+.zap-cliente{align-self:flex-start; background:var(--surface-2); border:1px solid var(--linha); border-top-left-radius:4px;}
+.zap-ia{align-self:flex-end; background:linear-gradient(135deg, rgba(91,110,245,.35), rgba(47,225,214,.25)); border:1px solid rgba(125,139,255,.4); border-top-right-radius:4px;}
+.zap-aviso{font-size:.82rem; color:var(--laranja); border:1px dashed rgba(255,138,61,.5); border-radius:10px; padding:10px 12px; text-align:center;}
+.planos{display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:stretch; margin-top:10px;}
+.plano{position:relative; display:flex; flex-direction:column; gap:14px; background:var(--surface-2); border:1px solid var(--linha); border-radius:20px; padding:32px 28px;}
+.plano h3{font-size:1.2rem;}
+.plano-preco{font-size:2.4rem; font-weight:800;}
+.plano-preco span{font-size:1rem; color:var(--texto-claro); font-weight:500;}
+.plano ul{list-style:none; padding:0; margin:0; display:grid; gap:10px; color:var(--texto-claro); font-size:.95rem; flex:1;}
+.plano li::before{content:"✓"; color:var(--turquesa); font-weight:700; margin-right:8px;}
+.plano .btn{text-align:center; justify-content:center;}
+.plano-destaque{border:2px solid var(--azul-royal); box-shadow:0 20px 60px rgba(91,110,245,.25);}
+.plano-selo{position:absolute; top:-13px; left:50%; transform:translateX(-50%); background:var(--laranja); color:#1a0f05; font-size:.75rem; font-weight:700; padding:5px 14px; border-radius:999px; white-space:nowrap;}
+.zap-rodape-planos{margin-top:26px; font-size:.88rem;}
+.zap-rodape-planos a{color:var(--azul-claro);}
+.faq{max-width:760px; margin:0 auto; display:grid; gap:12px;}
+.faq details{background:var(--surface); border:1px solid var(--linha); border-radius:14px; padding:18px 22px;}
+.faq summary{cursor:pointer; font-weight:600;}
+.faq details p{color:var(--texto-claro); margin-top:10px; font-size:.95rem;}
+@media (max-width:1100px){ .planos{grid-template-columns:1fr; max-width:460px; margin-left:auto; margin-right:auto;} }
+
+/* Sugestão do ZapCRM nas páginas de CRM e Agente de IA */
+.zap-sugestao-sec{padding-bottom:0}
+.zap-sugestao{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:36px 40px;border-radius:20px;background:linear-gradient(135deg,rgba(47,225,214,.10),rgba(0,0,0,0) 60%),var(--surface);border:1px solid rgba(47,225,214,.35);color:inherit;text-decoration:none;transition:transform .2s,border-color .2s}
+.zap-sugestao:hover{transform:translateY(-3px);border-color:rgba(47,225,214,.7)}
+.zap-sugestao h2{font-size:1.6rem;margin:6px 0 10px}
+.zap-sugestao h2 span{color:var(--turquesa)}
+.zap-sugestao p{color:var(--texto-claro);max-width:640px}
+.zap-sugestao ul{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:14px;color:var(--texto-claro);font-size:.9rem;list-style:none;padding:0}
+.zap-sugestao .btn{flex-shrink:0}
+@media (max-width:768px){
+  .zap-sugestao{flex-direction:column;align-items:flex-start;padding:28px 22px}
+  .zap-sugestao h2{font-size:1.3rem}
+}
