@@ -287,7 +287,7 @@
 <script>
   // Enquanto crm.hippersolucoes.com não estiver no ar, os botões de teste levam ao WhatsApp
   // e o "Entrar" fica escondido. Quando o servidor estiver no ar, troque para true.
-  var CRM_NO_AR = false;
+  var CRM_NO_AR = true;
   var NOMES = { essencial: 'Essencial', profissional: 'Profissional', empresa: 'Empresa' };
   if (!CRM_NO_AR) {
     document.querySelectorAll('.btn-entrar').forEach(function (a) { a.style.display = 'none'; });
